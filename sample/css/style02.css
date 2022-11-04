@@ -17,6 +17,7 @@ header{
   align-items: center;
   z-index: 100;
   top: 0;
+  font-family: serif;
   color: rgb(255, 255, 255);
 }
 
