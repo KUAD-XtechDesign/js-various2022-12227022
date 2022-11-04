@@ -90,3 +90,17 @@ img{
   height: 3px;
   background: linear-gradient(to right, blue,red);
 }
+#intro{
+  position: fixed;
+  display: flex;
+  z-index: 101;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-family: serif;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+}
