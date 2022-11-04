@@ -27,7 +27,7 @@ $(function(){
     scrollTop = $(this).scrollTop()//何ピクセルスクロールしたか
     scrollRatio = scrollTop/(documentH-windowH)//どれくらいスクロールされたか0から1
     
-    separate = documentH / 3;//内容の高さを3分割した数値
+    separate = documentH / 2;//内容の高さを2分割した数値
 
     //３分割した数値とどれだけスクロールしたかを比較→bodyにクラスをつける。あとはCSSファイルでデザイン変更
     if(scrollTop < separate){
@@ -48,14 +48,10 @@ $(function(){
 
   //Menuボタンを押した時
   $("#btn01").on("click",function(){
-    $("html, body").animate({scrollTop:0}, 1000, "swing");
-  })
-
-  $("#btn02").on("click",function(){
     $("html, body").animate({scrollTop:separate*1}, 1000, "swing");
   })
 
-  $("#btn03").on("click",function(){
+  $("#btn02").on("click",function(){
     $("html, body").animate({scrollTop:separate*2}, 1000, "swing");
   })
 
