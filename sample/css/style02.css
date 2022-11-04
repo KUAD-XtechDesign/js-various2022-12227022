@@ -11,12 +11,13 @@ img{
 header{
   position: fixed;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   padding: 20px;
   display: flex;
   align-items: center;
   z-index: 100;
   top: 0;
+  color: rgb(255, 255, 255);
 }
 
 #wave{
@@ -88,7 +89,7 @@ img{
   left: 0;
   width: 0;
   height: 3px;
-  background: linear-gradient(to right, blue,red);
+  background: linear-gradient(to right, rgb(159, 218, 255),rgb(255, 174, 211));
 }
 #intro{
   position: fixed;
@@ -99,7 +100,7 @@ img{
   height: 100%;
   color: #fff;
   font-family: serif;
-  font-size: 20px;
+  font-size: 40px;
   align-items: center;
   justify-content: center;
   top: 0;
