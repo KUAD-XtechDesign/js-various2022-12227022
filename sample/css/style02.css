@@ -34,8 +34,8 @@ header{
 #menu{
   position: fixed;
   top: 100px;
-  font-size: 100px;
-  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-family:  serif;
   line-height: 1;
   left: 20px;
   z-index: 100;
