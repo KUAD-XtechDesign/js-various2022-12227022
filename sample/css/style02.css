@@ -42,10 +42,14 @@ header{
   cursor: pointer;
   color: rgb(0, 0, 0);
   font-weight: bold;
--webkit-text-stroke: 1px #FFF;
+  -webkit-text-stroke: 1px #FFF;
+}
 
-  
-  
+#menu a{
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-text-stroke: 1px #FFF;
 }
 
 #content{
