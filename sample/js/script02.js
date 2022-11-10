@@ -66,7 +66,7 @@ $(function(){
 		{ transform: "rotate(0deg)" }
 	 ],
 	 {
-		duration: 20000,
+		duration: 30000,
 		easing: 'linear',
 		iterations: Infinity
 	 }
