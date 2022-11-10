@@ -93,7 +93,7 @@ img{
   left: 0;
   width: 0;
   height: 3px;
-  background: linear-gradient(to right, rgb(159, 218, 255),rgb(255, 174, 211));
+  background: linear-gradient(to right, rgb(44, 156, 255),rgb(255, 72, 139));
 }
 #intro{
   position: fixed;
