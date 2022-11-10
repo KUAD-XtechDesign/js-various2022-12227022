@@ -47,13 +47,15 @@ $(function(){
 
 
   //Menuボタンを押した時
-  $("#btn01").on("click",function(){
-    $("html, body").animate({scrollTop:0}, 1000, "swing");
-  })
-
-  $("#btn02").on("click",function(){
-    $("html, body").animate({scrollTop:separate*1}, 1000, "swing");
-  })
+  $('a[href^="#"]').click(function(){
+    let adjust = -120;
+    let speed = 400;
+    let href= $(this).attr("href");
+    let target = $(href == "#" || href == "" ? 'html' : href);
+    let position = target.offset().top + adjust;
+    $('body,html').animate({scrollTop:position}, speed, 'swing');
+    return false;
+  });
 
 
   // ねこアイコン()
