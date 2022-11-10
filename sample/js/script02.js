@@ -59,6 +59,17 @@ $(function(){
     $("html, body").animate({scrollTop:separate*2}, 1000, "swing");
   })
 
+ // ねこアイコン()
+ document.querySelector("./images/neko_aikonn.png").animate(
+	 [
+		{ transform: "./images/neko_aikonn.png(0deg)" },
+		{ transform: "./images/neko_aikonn.png(360deg)" }
+	 ],
+	 {
+		duration: 1000,
+		easing: 'linear',
+		iterations: Infinity
+	 }
+);
 
-
-})
+)
