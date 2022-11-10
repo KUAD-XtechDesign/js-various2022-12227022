@@ -41,6 +41,9 @@ header{
   z-index: 100;
   cursor: pointer;
   color: rgb(0, 0, 0);
+  font-weight: bold;
+-webkit-text-stroke: 1px #FFF;
+
   
   
 }

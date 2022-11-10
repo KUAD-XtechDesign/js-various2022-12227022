@@ -55,9 +55,6 @@ $(function(){
     $("html, body").animate({scrollTop:separate*1}, 1000, "swing");
   })
 
-  $("#btn03").on("click",function(){
-    $("html, body").animate({scrollTop:separate*2}, 1000, "swing");
-  })
 
   // ねこアイコン()
   document.querySelector("#intro .pic").animate(
