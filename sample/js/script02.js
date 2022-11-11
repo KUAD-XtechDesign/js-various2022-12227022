@@ -1,5 +1,17 @@
 $(function(){
 
+  $("#intro p").hide().fadeIn(1000)
+    //setTimeout(introAnime,2000);//2秒経った時にintroAnimeを実行
+    $("#intro").on("click",introAnime)//クリックしたらintroAnimeを実行
+  
+    function introAnime(){//jqueryでフェードアウト、終わったらcontentAnime実行
+      $("#intro").fadeOut(1000,contentAnime);
+    }
+  
+    function contentAnime(){
+      setTimeout(backAnime,300);//0.3秒後backAnime実行
+ }
+
   let windowH
   let documentH 
   let documentW 
@@ -15,7 +27,7 @@ $(function(){
     scrollTop = $(this).scrollTop()//何ピクセルスクロールしたか
     scrollRatio = scrollTop/(documentH-windowH)//どれくらいスクロールされたか0から1
     
-    separate = documentH / 3;//内容の高さを3分割した数値
+    separate = documentH / 2;//内容の高さを分割した数値
 
     //３分割した数値とどれだけスクロールしたかを比較→bodyにクラスをつける。あとはCSSファイルでデザイン変更
     if(scrollTop < separate){
@@ -35,18 +47,28 @@ $(function(){
 
 
   //Menuボタンを押した時
-  $("#btn01").on("click",function(){
-    $("html, body").animate({scrollTop:0}, 1000, "swing");
-  })
-
-  $("#btn02").on("click",function(){
-    $("html, body").animate({scrollTop:separate*1}, 1000, "swing");
-  })
-
-  $("#btn03").on("click",function(){
-    $("html, body").animate({scrollTop:separate*2}, 1000, "swing");
-  })
+  $('a[href^="#"]').click(function(){
+    let adjust = -120;
+    let speed = 400;
+    let href= $(this).attr("href");
+    let target = $(href == "#" || href == "" ? 'html' : href);
+    let position = target.offset().top + adjust;
+    $('body,html').animate({scrollTop:position}, speed, 'swing');
+    return false;
+  });
 
 
+  // ねこアイコン()
+  document.querySelector("#intro .pic").animate(
+	 [
+		{ transform: "rotate(360deg)" },
+		{ transform: "rotate(0deg)" }
+	 ],
+	 {
+		duration: 30000,
+		easing: 'linear',
+		iterations: Infinity
+	 }
+  );
 
 })
